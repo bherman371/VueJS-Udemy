@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VueJS - Events</title>
+        <script src="vue.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <button v-on:click="increase(2, $event)">Click Me!</button>
+            <p>{{ counter }}</p>
+            <p v-on:mousemove="updateCoordinates">
+                Coordinates: {{ x }} / {{ y }}
+                - <span v-on:mousemove.stop.prevent="">DEAD SPOT</span>
+            </p>
+            <input type="text" v-on:keyup.enter.space="alertMe">
+        </div>
+        <script src="scriptevents.js"></script>
+    </body>
+</html>
